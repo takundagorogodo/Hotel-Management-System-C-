@@ -54,7 +54,7 @@ g++ hotel_management.cpp -o hotel
 ### Run
 
 ```bash
-./hotel
+./hotel_management
 ```
 ## Sample Output
 
@@ -65,7 +65,6 @@ Enter quantity of Burger: 15
 Enter quantity of Noodles: 12
 Enter quantity of Shake: 18
 Enter quantity of Chicken Roll: 25
-
 
 ------ MENU ------
 1. Rooms
@@ -82,17 +81,13 @@ Enter choice: 2
 Enter quantity of Pasta : 5
 5 Pasta ordered successfully
 
-
 ------ MENU ------
 Enter choice: 3
-
 Enter quantity of Burger : 4
 4 Burger ordered successfully
 
-
 ------ MENU ------
 Enter choice: 7
-
 
 ------ SALES REPORT ------
 
@@ -134,7 +129,6 @@ Total collection : 0
 ```
 
 ## Learning Purpose
-
 This project demonstrates:
 
 * Creating and using **classes**
