@@ -8,7 +8,6 @@ The program allows a user to manage hotel services such as **room bookings and f
 It runs in the **command-line interface** and is suitable for beginners learning **C++ classes, objects, and basic inventory management logic**.
 
 ## Features
-
 * Order hotel rooms and food items
 * Check available quantity before confirming an order
 * Track how many items have been sold
@@ -16,9 +15,7 @@ It runs in the **command-line interface** and is suitable for beginners learning
 * Menu-driven interface for easy interaction
 
 ## Items Managed
-
 The system currently supports the following items:
-
 * Rooms
 * Pasta
 * Burger
@@ -27,20 +24,17 @@ The system currently supports the following items:
 * Chicken Roll
 
 Each item has:
-
 * Total available quantity
 * Number sold
 * Remaining quantity
 * Total revenue generated
 
 ## Technologies Used
-
 * **C++**
 * **Object-Oriented Programming (Classes & Objects)**
 * **Standard Input/Output (iostream)**
 
 ## How It Works
-
 1. The user enters the initial quantity for each item.
 2. A menu is displayed with ordering options.
 3. When an order is placed:
