@@ -54,13 +54,89 @@ Each item has:
 ### Compile
 
 ```bash
-g++ hotel.cpp -o hotel
+g++ hotel_management.cpp -o hotel
 ```
 
 ### Run
 
 ```bash
 ./hotel
+```
+## Sample Output
+
+```
+Enter number of rooms: 10
+Enter quantity of Pasta: 20
+Enter quantity of Burger: 15
+Enter quantity of Noodles: 12
+Enter quantity of Shake: 18
+Enter quantity of Chicken Roll: 25
+
+
+------ MENU ------
+1. Rooms
+2. Pasta
+3. Burger
+4. Noodles
+5. Shake
+6. Chicken Roll
+7. Sales Report
+8. Exit
+
+Enter choice: 2
+
+Enter quantity of Pasta : 5
+5 Pasta ordered successfully
+
+
+------ MENU ------
+Enter choice: 3
+
+Enter quantity of Burger : 4
+4 Burger ordered successfully
+
+
+------ MENU ------
+Enter choice: 7
+
+
+------ SALES REPORT ------
+
+Item : Rooms
+Total available : 10
+Sold : 0
+Remaining : 10
+Total collection : 0
+
+Item : Pasta
+Total available : 20
+Sold : 5
+Remaining : 15
+Total collection : 1250
+
+Item : Burger
+Total available : 15
+Sold : 4
+Remaining : 11
+Total collection : 1000
+
+Item : Noodles
+Total available : 12
+Sold : 0
+Remaining : 12
+Total collection : 0
+
+Item : Shake
+Total available : 18
+Sold : 0
+Remaining : 18
+Total collection : 0
+
+Item : Chicken Roll
+Total available : 25
+Sold : 0
+Remaining : 25
+Total collection : 0
 ```
 
 ## Learning Purpose
