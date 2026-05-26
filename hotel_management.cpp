@@ -224,77 +224,80 @@ void hotelManagement() {
             case 4:
                 cout << "\nEnter your Noodles quantity: ";
                 cin >> quant;
-                // *** fixed: Qnoodles and Snoodles spelling ***
+                
                 if (Qnoodles - Snoodles >= quant) {
                     Snoodles += quant;
                     Total_noodles += (quant * 250);
                     cout << "\n\t\t" << quant << " noodles ordered!\n";
                 } else {
-                    cout << "\n\tOnly " << Qnoodles - Snoodles << " noodles remaining!\n";
+                    cout << "\n\t Only " << Qnoodles - Snoodles << " noodles remaining!\n";
                 }
                 break;
 
             case 5:
-                cout << "\nEnter your Shake quantity: ";
+                cout << "\n  Enter your Shake quantity: ";
                 cin >> quant;
+                
                 if (Qshake - Sshake >= quant) {
                     Sshake += quant;
                     Total_shake += (quant * 140);
                     cout << "\n\t\t" << quant << " shake(s) ordered!\n";
                 } else {
-                    cout << "\n\tOnly " << Qshake - Sshake << " shake(s) remaining!\n";
+                    cout << "\n\t Only " << Qshake - Sshake << " shake(s) remaining!\n";
                 }
                 break;
 
             case 6:
-                cout << "\nEnter your Chicken-roll quantity: ";
+                cout << "\n Enter your Chicken-roll quantity: ";
                 cin >> quant;
+                
                 if (Qchicken - Schicken >= quant) {
                     Schicken += quant;
                     Total_chicken += (quant * 120);
                     cout << "\n\t\t" << quant << " chicken-roll(s) ordered!\n";
                 } else {
-                    cout << "\n\tOnly " << Qchicken - Schicken << " chicken-roll(s) remaining!\n";
+                    cout << "\n\t Only " << Qchicken - Schicken << " chicken-roll(s) remaining!\n";
                 }
                 break;
 
             case 7:
-                cout << "\n\n=========== SALES & COLLECTIONS REPORT ===========\n";
-                cout << "\nRooms we had: " << Qrooms;
-                cout << "\nRooms rented: " << Srooms;
-                cout << "\nRooms remaining: " << Qrooms - Srooms;
-                cout << "\nTotal room revenue: Rs. " << Total_rooms;
+                cout << "\n\n =========== SALES & COLLECTIONS REPORT ===========\n";
+                
+                cout << "\n Rooms we had: " << Qrooms;
+                cout << "\n Rooms rented: " << Srooms;
+                cout << "\n Rooms remaining: " << Qrooms - Srooms;
+                cout << "\n Total room revenue: Rs. " << Total_rooms;
 
-                cout << "\n\nPasta we had: " << Qpasta;
-                cout << "\nPasta sold: " << Spasta;
-                cout << "\nPasta remaining: " << Qpasta - Spasta;
-                cout << "\nTotal pasta revenue: Rs. " << Total_pasta;
+                cout << "\n\n Pasta we had: " << Qpasta;
+                cout << "\n Pasta sold: " << Spasta;
+                cout << "\n Pasta remaining: " << Qpasta - Spasta;
+                cout << "\n Total pasta revenue: Rs. " << Total_pasta;
 
-                cout << "\n\nBurgers we had: " << Qburger;
-                cout << "\nBurgers sold: " << Sburger;
-                cout << "\nBurgers remaining: " << Qburger - Sburger;
-                cout << "\nTotal burger revenue: Rs. " << Total_burger;
+                cout << "\n\n Burgers we had: " << Qburger;
+                cout << "\n Burgers sold: " << Sburger;
+                cout << "\n Burgers remaining: " << Qburger - Sburger;
+                cout << "\n Total burger revenue: Rs. " << Total_burger;
 
-                cout << "\n\nNoodles we had: " << Qnoodles;
-                cout << "\nNoodles sold: " << Snoodles;
-                cout << "\nNoodles remaining: " << Qnoodles - Snoodles;
-                cout << "\nTotal noodles revenue: Rs. " << Total_noodles;
+                cout << "\n\n Noodles we had: " << Qnoodles;
+                cout << "\n Noodles sold: " << Snoodles;
+                cout << "\n Noodles remaining: " << Qnoodles - Snoodles;
+                cout << "\n Total noodles revenue: Rs. " << Total_noodles;
 
-                cout << "\n\nShakes we had: " << Qshake;
-                cout << "\nShakes sold: " << Sshake;
-                cout << "\nShakes remaining: " << Qshake - Sshake;
-                cout << "\nTotal shake revenue: Rs. " << Total_shake;
+                cout << "\n\n Shakes we had: " << Qshake;
+                cout << "\n Shakes sold: " << Sshake;
+                cout << "\n Shakes remaining: " << Qshake - Sshake;
+                cout << "\n Total shake revenue: Rs. " << Total_shake;
 
-                cout << "\n\nChicken-rolls we had: " << Qchicken;
-                cout << "\nChicken-rolls sold: " << Schicken;
-                cout << "\nChicken-rolls remaining: " << Qchicken - Schicken;
-                cout << "\nTotal chicken-roll revenue: Rs. " << Total_chicken;
-                cout << "\n==================================================\n";
-                break;   // *** break added ***
+                cout << "\n\n Chicken-rolls we had: " << Qchicken;
+                cout << "\n Chicken-rolls sold: " << Schicken;
+                cout << "\n Chicken-rolls remaining: " << Qchicken - Schicken;
+                cout << "\n Total chicken-roll revenue: Rs. " << Total_chicken;
+                cout << "\n ==================================================\n";
+                break;   
 
             case 8:
-                cout << "\n\t\tExiting hotel system...\n";
-                return;  // return to main menu (login page)
+                cout << "\n\t\t Exiting hotel system...\n";
+                return;  
 
             default:
                 cout << "\n\t\tInvalid option! Try again.\n";
