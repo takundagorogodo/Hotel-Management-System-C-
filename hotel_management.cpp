@@ -4,7 +4,6 @@
 #include <cstdlib>    
 using namespace std;
 
-// - Function Declarations
 void login();
 void registration();
 void forgot();
@@ -12,6 +11,7 @@ void hotelManagement();
 
 // -- Main Function 
 int main() {
+    
     int choice;
     while (true) {
         cout << "\n\n\t\t\t==================================================\n";
@@ -24,6 +24,7 @@ int main() {
         cout << "\t| Press 4 to EXIT                        |\n";
         cout << "\t|----------------------------------------|\n";
         cout << "\nPlease enter your choice: ";
+        
         cin >> choice;
 
         switch (choice) {
@@ -51,48 +52,48 @@ void login() {
     int count = 0;                  
     string userId, password, id, pass;
     system("cls");
-    cout << "\t\t\tPlease enter the username and password\n";
-    cout << "\t\t\tUSERNAME: ";
+    cout << "\t\t\t Please enter the username and password\n";
+    cout << "\t\t\t USERNAME: ";
     cin >> userId;
-    cout << "\t\t\tPASSWORD: ";
+    cout << "\t\t\t PASSWORD: ";
     cin >> password;
 
     ifstream input("records.txt");
 
-    if (!input) {   // file doesn't exist yet -> no users
-        cout << "\n\t\tNo user records found. Please register first.\n";
+    if (!input) {   
+        cout << "\n\t\t No user records found. Please register first.\n";
         return;
     }
 
     while (input >> id >> pass) {
         if (id == userId && pass == password) {
             count = 1;
-            break;          // stop searching once found
+            break;      
         }
     }
-    input.close();   // close AFTER reading all data
+    input.close();   
 
     if (count == 1) {
         cout << "\n\t\t" << userId << " - LOGIN successful!\n";
-        cout << "\t\tPress any key to enter the hotel system...\n";
-        cin.get(); cin.get();   // wait for user
-        hotelManagement();      // go to the hotel system
-        // After hotelManagement() returns (user chose exit), return to main menu
+        cout << "\t\t Press any key to enter the hotel system...\n";
+        cin.get();
+        cin.get();   
+        
+        hotelManagement();      
+        
     } else {
         cout << "\n\t\tLOGIN ERROR! Incorrect username or password.\n";
     }
 }
 
-// ------------------------- Registration Function -------------------------
 void registration() {
     string userId, password;
     system("cls");
-    cout << "\t\t\tEnter the username: ";
+    cout << "\t\t\t Enter the username: ";
     cin >> userId;
-    cout << "\t\t\tEnter the password: ";
+    cout << "\t\t\t Enter the password: ";
     cin >> password;
 
-    // First check if the username already exists
     ifstream input("records.txt");
     string id, pass;
     bool exists = false;
@@ -111,18 +112,16 @@ void registration() {
         return;
     }
 
-    // If not exists, append to file
     ofstream out("records.txt", ios::app);
     out << userId << " " << password << "\n";
     out.close();
-    cout << "\n\t\tRegistration successful!\n";
+    cout << "\n\t\t Registration successful!\n";
 }
 
-// ------------------------- Forgot Password Function ----------------------
 void forgot() {
     string userId;
     system("cls");
-    cout << "\t\t\tEnter your username to recover password: ";
+    cout << "\t\t\t Enter your username to recover password: ";
     cin >> userId;
 
     ifstream input("records.txt");
@@ -141,16 +140,14 @@ void forgot() {
     }
 
     if (!found) {
-        cout << "\n\t\tUsername not found!\n";
+        cout << "\n\t\t Username not found!\n";
     }
 }
 
-// ------------------------- Hotel Management System -----------------------
 void hotelManagement() {
     system("cls");
     int quant, choice;
 
-    // Stock quantities (initialise)
     int Qrooms = 0, Qpasta = 0, Qburger = 0, Qnoodles = 0, Qshake = 0, Qchicken = 0;
     // Sold items
     int Srooms = 0, Spasta = 0, Sburger = 0, Snoodles = 0, Sshake = 0, Schicken = 0;
