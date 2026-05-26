@@ -4,13 +4,13 @@
 #include <cstdlib>    
 using namespace std;
 
-// ------------------------- Function Declarations -------------------------
+// - Function Declarations
 void login();
 void registration();
 void forgot();
 void hotelManagement();
 
-// ------------------------- Main Function ---------------------------------
+// -- Main Function 
 int main() {
     int choice;
     while (true) {
@@ -47,9 +47,8 @@ int main() {
     return 0;
 }
 
-// ------------------------- Login Function --------------------------------
 void login() {
-    int count = 0;                   // initialize!
+    int count = 0;                  
     string userId, password, id, pass;
     system("cls");
     cout << "\t\t\tPlease enter the username and password\n";
